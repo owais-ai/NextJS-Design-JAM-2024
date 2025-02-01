@@ -54,20 +54,20 @@ export default function Header() {
           />
         </button>
         <button>
-          <Image
+          <Link href={"/wishlist"}><Image
             src={"/akar-icons_heart.svg"}
             alt="Wishlist"
             width={25}
             height={25}
-          />
+          /></Link>
         </button>
-        <button>
+        <button><Link href={"/cart"}>
           <Image
             src={"/ant-design_shopping-cart-outlined.svg"}
             alt="Cart"
             width={25}
             height={25}
-          />
+          /></Link>
         </button>
         
       </div>
