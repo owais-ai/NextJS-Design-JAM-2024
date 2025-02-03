@@ -1,61 +1,36 @@
-# 📌 Day 5 - Testing, Error Handling, and Backend Integration Refinement
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-##  Objective
-On **Day 5**, we focused on **testing, refining error handling, and optimizing backend integration** to ensure a seamless user experience. This involved thorough **functional testing, performance optimization, and security enhancements** for our marketplace.
+## Getting Started
 
----
+First, run the development server:
 
-## ✅ Key Achievements
-1. **Functional Testing:** Verified core features including product listing, search, filters, cart operations, and dynamic routing.
-2. **Error Handling:** Implemented try-catch blocks, fallback UI messages, and user-friendly error alerts.
-3. **Performance Optimization:** Improved page load speed, optimized images, and reduced unused CSS/JS.
-4. **Cross-Browser & Device Testing:** Ensured smooth responsiveness on **Chrome, Firefox, Safari, and Edge** across different devices.
-5. **Security Enhancements:** Prevented API key exposure, enforced HTTPS, and sanitized inputs.
-6. **User Acceptance Testing (UAT):** Simulated real-world scenarios for seamless browsing, shopping, and checkout experience.
-7. **Comprehensive Documentation:** Created **a structured testing report** in CSV format and documented testing steps, results, and optimizations.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🛠 Implementation Steps
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### 1️⃣ **Functional Testing**
-- Tested UI behavior with **on Multiple Devices**.
-- Verified dynamic routes for **Product Details & Cart**.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### 2️⃣ **Error Handling & Fallback UI**
-- Implemented proper **try-catch** handling for API failures.
-- Added **loading spinner** and user-friendly error messages.
-- Displayed fallback UI (e.g., _"No products available"_).
+## Learn More
 
-### 3️⃣ **Performance Optimization**
-- Ran **Lighthouse & GTmetrix** tests to identify bottlenecks.
-- Implemented **lazy loading** for images and assets.
-- Minimized **JavaScript & CSS bundle sizes**.
-- Enabled **browser caching** for improved load times.
+To learn more about Next.js, take a look at the following resources:
 
-### 4️⃣ **Cross-Browser & Mobile Testing**
-- Tested on **Chrome, Firefox, Edge, and Safari**.
-- Ensured a **responsive layout** across mobile, tablet, and desktop.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### 5️⃣ **Security Enhancements**
-- **Input Validation:** Prevented SQL injection and XSS attacks.
-- **API Key Protection:** Stored sensitive data in `.env.local` files.
-- **Secure Communication:** Verified HTTPS for all API requests.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### 6️⃣ **User Acceptance Testing (UAT)**
-- **Simulated real-world shopping scenarios** (Browsing, Searching, Adding to Cart, Checkout).
-- **Gathered feedback** and made necessary UI/UX adjustments.
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-##  Testing Report (CSV Format)
-A detailed testing report has been submitted in CSV format containing:
-- **Test Case ID**
-- **Test Case Description**
-- **Steps to Execute**
-- **Expected vs. Actual Results**
-- **Pass/Fail Status**
-- **Issue Severity & Remarks**
-
----
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
