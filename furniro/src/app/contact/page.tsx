@@ -6,7 +6,7 @@ export default function Contact() {
         <div className="min-h-screen bg-white">
             
             {/* Page Header */}
-            <div className="flex flex-col items-center justify-center mt-16 gap-4">
+            <div className="flex flex-col items-center justify-center mt-16 mx-6 gap-4">
                 <h1 className="text-4xl font-bold text-[#333333]">Get In Touch With Us</h1>
                 <p className="text-[#9F9F9F] text-center max-w-2xl">
                 For More Information About Our Product & Services. Please Feel Free To Drop Us

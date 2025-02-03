@@ -137,7 +137,7 @@ export default function Shop() {
           </div>
 
           {/* Pagination (Now Responsive) */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center my-8 gap-2">
             {[...Array(totalPages)].map((_, index) => (
               <button
                 key={index + 1}

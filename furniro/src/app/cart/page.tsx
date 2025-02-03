@@ -52,6 +52,7 @@ export default function CartPage() {
     fetchProducts();
   }, []);
 
+  // Update cart quantity and dispatch custom event
   const updateQuantity = (id: string, newQuantity: number) => {
     if (newQuantity < 1) return; // Prevent negative quantity
 
@@ -60,14 +61,18 @@ export default function CartPage() {
     );
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    window.dispatchEvent(new Event("localStorageUpdated"));
   };
 
+  // Remove item from cart and dispatch custom event
   const removeFromCart = (id: string) => {
     const updatedCart = cart.filter((item) => item.id !== id);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    window.dispatchEvent(new Event("localStorageUpdated"));
   };
 
+  // Calculate the grand total price
   const getTotalPrice = () => {
     return cart.reduce((total, cartItem) => {
       const product = products.find((p) => p._id === cartItem.id);
@@ -84,7 +89,10 @@ export default function CartPage() {
         <p className="text-center text-gray-500 mt-4">Loading cart items...</p>
       ) : cart.length === 0 ? (
         <p className="text-center text-gray-500 mt-4">
-          Your cart is empty. <Link href="/shop" className="text-[#B88E2F]">Continue Shopping</Link>
+          Your cart is empty.{" "}
+          <Link href="/shop" className="text-[#B88E2F]">
+            Continue Shopping
+          </Link>
         </p>
       ) : (
         <div className="mt-6 max-w-5xl mx-auto">
@@ -93,29 +101,43 @@ export default function CartPage() {
             if (!product) return null;
 
             return (
-              <div key={cartItem.id} className="flex justify-between items-center border-b py-4">
-                {/* Product Image */}
+              <div
+                key={cartItem.id}
+                className="flex justify-between items-center border-b py-4"
+              >
+                {/* Product Image and Details */}
                 <div className="flex items-center gap-4">
                   <div className="w-24 h-24 relative">
-                    <Image src={product.imageUrl} alt={product.title} layout="fill" className="rounded-md object-cover" />
+                    <Image
+                      src={product.imageUrl}
+                      alt={product.title}
+                      layout="fill"
+                      className="rounded-md object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{product.title}</h3>
-                    <p className="text-gray-500">Rp {product.price.toLocaleString()}</p>
+                    <p className="text-gray-500">
+                      Rp {product.price.toLocaleString()}
+                    </p>
                   </div>
                 </div>
 
                 {/* Quantity Selector */}
                 <div className="flex items-center gap-3">
                   <button
-                    onClick={() => updateQuantity(cartItem.id, cartItem.quantity - 1)}
+                    onClick={() =>
+                      updateQuantity(cartItem.id, cartItem.quantity - 1)
+                    }
                     className="px-2 py-1 border rounded text-lg"
                   >
                     -
                   </button>
                   <span className="text-lg">{cartItem.quantity}</span>
                   <button
-                    onClick={() => updateQuantity(cartItem.id, cartItem.quantity + 1)}
+                    onClick={() =>
+                      updateQuantity(cartItem.id, cartItem.quantity + 1)
+                    }
                     className="px-2 py-1 border rounded text-lg"
                   >
                     +
@@ -123,7 +145,9 @@ export default function CartPage() {
                 </div>
 
                 {/* Total Price */}
-                <p className="font-semibold">Rp {(cartItem.quantity * product.price).toLocaleString()}</p>
+                <p className="font-semibold">
+                  Rp {(cartItem.quantity * product.price).toLocaleString()}
+                </p>
 
                 {/* Remove Button */}
                 <button
@@ -136,9 +160,11 @@ export default function CartPage() {
             );
           })}
 
-          {/* Grand Total */}
+          {/* Grand Total and Checkout */}
           <div className="text-right mt-6">
-            <h3 className="text-xl font-bold">Total: Rp {getTotalPrice().toLocaleString()}</h3>
+            <h3 className="text-xl font-bold">
+              Total: Rp {getTotalPrice().toLocaleString()}
+            </h3>
             <button className="mt-4 bg-[#B88E2F] text-white px-6 py-3 rounded-md text-lg font-semibold">
               Proceed to Checkout
             </button>

@@ -63,7 +63,7 @@ export default function Home() {
       {/* Browse The Range Section */}
       <section className="mt-16 px-4 lg:px-32 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-[#333333]">Browse The Range</h2>
-        <p className="text-[#666666] mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {[
