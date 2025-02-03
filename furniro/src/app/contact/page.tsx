@@ -1,12 +1,31 @@
 import Image from "next/image";
 import Service from "../components/Service";
+import Link from "next/link";
 
 export default function Contact() {
     return (
         <div className="min-h-screen bg-white">
-            
-            {/* Page Header */}
-            <div className="flex flex-col items-center justify-center mt-16 mx-6 gap-4">
+           {/* Header Section */}
+           <div className="flex flex-col gap-2 items-center justify-center absolute top-36 z-10 left-1/2 transform -translate-x-1/2">
+                <h3 className="text-4xl tracking-wider font-bold">Contact</h3>
+                <p className="flex gap-2">
+                    <Link href={"/"}>Home</Link>
+                    <Image src={"/Vector.svg"} alt="Arrow" width={10} height={10} />
+                    <span><Link href={"#"}>Contact</Link></span>
+                </p>
+            </div>
+            <div className="h-52 relative">
+                <Image
+                    src={"/cover.jpeg"}
+                    alt="Cover"
+                    layout="fill"
+                    className="object-cover object-center opacity-40"
+                />
+            </div>
+
+
+            {/* Page Section */}
+            <div className="flex flex-col items-center justify-center mt-8 mx-6 gap-4">
                 <h1 className="text-4xl font-bold text-[#333333]">Get In Touch With Us</h1>
                 <p className="text-[#9F9F9F] text-center max-w-2xl">
                 For More Information About Our Product & Services. Please Feel Free To Drop Us

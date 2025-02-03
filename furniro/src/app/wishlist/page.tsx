@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { sanityClient } from "@/lib/sanityClient";
 import ProductCard from "../components/ProductCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 interface Product {
   _id: string;
@@ -77,7 +78,7 @@ export default function Wishlist() {
       </h2>
 
       {loading ? (
-        <p className="text-center text-gray-500 text-lg">Loading wishlist...</p>
+        <LoadingSpinner />
       ) : products.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (

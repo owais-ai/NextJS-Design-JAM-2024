@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanityClient";
 import ProductCard from "@/app/components/ProductCard";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 interface Product {
   _id: string;
@@ -87,7 +88,7 @@ export default function Home() {
 
         {/* ✅ Show loading state while fetching products */}
         {loading ? (
-          <p className="text-center text-gray-500 text-lg w-full mt-10">Loading products...</p>
+          <LoadingSpinner />
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
             {products.length > 0 ? (

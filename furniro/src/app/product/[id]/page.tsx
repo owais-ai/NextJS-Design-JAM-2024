@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { sanityClient } from "@/lib/sanityClient";
 import ProductCard from "@/app/components/ProductCard";
+import LoadingSpinner from "@/app/components/LoadingSpinner";
 
 interface Product {
   _id: string;
@@ -140,9 +141,7 @@ export default function ProductDetailPage() {
   // 5. Render States
   if (loading) {
     return (
-      <p className="text-center text-gray-500 text-lg w-full mt-10">
-        Loading product details...
-      </p>
+      <LoadingSpinner />
     );
   }
 
@@ -157,7 +156,7 @@ export default function ProductDetailPage() {
   const isOnWishlist = wishlist.includes(product._id);
 
   return (
-    <div className="px-4 lg:px-32 mt-10">
+    <div className="px-4 lg:px-32 my-6 md:my-10">
       {/* ---------- Top Section: Image + Basic Info + Price ---------- */}
       <div className="flex flex-col md:flex-row gap-8">
         {/* Product Image */}

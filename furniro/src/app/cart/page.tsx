@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { sanityClient } from "@/lib/sanityClient";
 import Link from "next/link";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 interface CartItem {
   id: string;
@@ -82,11 +83,11 @@ export default function CartPage() {
   };
 
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-6 md:mt-8">
       <h2 className="text-3xl font-bold text-center">🛒 Shopping Cart</h2>
 
       {loading ? (
-        <p className="text-center text-gray-500 mt-4">Loading cart items...</p>
+        <LoadingSpinner />
       ) : cart.length === 0 ? (
         <p className="text-center text-gray-500 mt-4">
           Your cart is empty.{" "}
@@ -165,9 +166,9 @@ export default function CartPage() {
             <h3 className="text-xl font-bold">
               Total: Rp {getTotalPrice().toLocaleString()}
             </h3>
-            <button className="mt-4 bg-[#B88E2F] text-white px-6 py-3 rounded-md text-lg font-semibold">
+            <Link href={"/checkout"}><button className="mt-4 bg-[#B88E2F] text-white px-6 py-3 rounded-md text-lg font-semibold">
               Proceed to Checkout
-            </button>
+            </button></Link>
           </div>
         </div>
       )}

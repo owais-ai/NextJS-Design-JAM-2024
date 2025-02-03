@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanityClient";
 import ProductCard from "../components/ProductCard";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 interface Product {
   _id: string;
@@ -111,7 +112,7 @@ export default function Shop() {
 
       {/* Loader while fetching */}
       {loading ? (
-        <p className="text-center text-gray-500 text-lg w-full mt-10">Loading products...</p>
+        <LoadingSpinner />
       ) : (
         <>
           {/* Product Listings */}
