@@ -1,0 +1,19 @@
+Test Case ID,Description,Steps,Expected Result,Actual Result,Status,Severity Level,Remarks
+TC-001,Fetch Products from Sanity,Call API & check response,Products should load successfully,Products loaded correctly,Passed,High,Products fetching perfectly
+TC-002,Add Product to Cart,Click Add to Cart button,Product should appear in cart,Product added successfully,Passed,High,Product is successfully added
+TC-003,Search Functionality,Enter a product name & search,Should return relevant products,Search results accurate,Passed,Medium,Showing accurate results
+TC-004,Wishlist Feature,Add & Remove from wishlist,Should update instantly,Working correctly,Passed,Medium,UI is perfectly rendered on small devices.
+TC-005,Mobile Responsiveness,View on different devices,Layout should adjust dynamically,UI adjusted correctly,Passed,High,Work as expected
+TC-006,Checkout functionlaity,Checkout selected products,checkout page should show selected products with quantity and price,Product and price correctly rendered,Passed,High,Work as expected
+TC-007,Checkout form validation,fields are set with the required attribute,Form should show error when submitting empty,Correctly showing errro on empty fields,Passed,High,Work as expected
+TC-008,Wishlist icon number popup,When product send to wishlist,Wishlist icon should show number of products in wishlist,Wishlist icon correctly showing numbers on icon,Passed,Medium,Work as expected
+TC-009,Cart icon number show,Cart icon show number on top when products are in cart,Cart icon should show number of prouducts in cart,Cart showing correct number of products in cart,Passed,Medium,Work as expected
+TC-010,Cart should be emptied after checkout,Submitting checkout form,Cart should be emptied after form submission,Cart removing products successfully,Passed,High,Work as expected
+TC-011,Loading icon appearance during fetching products,Refresh shop page,Loading spinner should be there during loading products,Spinner rendered prefectly,Passed,Low,Work as expected
+TC-012,Show more products button on homepage,Click show more button on homepage,It should show more products or take you to the shop page,It is taking us to the shop page,Passed,Medium,Work as expected
+TC-013,Product page dynamic behavoir,Click a single product form shop & home page,The single product page should show dynamic product with details,Product page showing dynamic data,Passed,High,Work as expected
+TC-014,Remove Product from Cart,Click to remove from Cart,The product should be removed from cart,Product removed from cart successfully,Passed,High,Work as expected
+TC-015,Remove a product from Wishlist ,Click to remove from Wishlist,Item should be removed from wishlist,Item successfully removed from wishlist,Passed,High,Work as expected
+TC-016,Empty cart message,visit shoppin cart when cart is empty,Cart should display message of cart is empty,Showing message correctly and redirecting to shop page,Passed,High,Work as expected
+TC-017,Adjusting quantity of products in cart,Increase and decreasing items quantity,Items and Amount should be also adjusted,Items and amount adjusting correctly,Passed,High,Work as expected
+TC-018,Pagination on product page,Click on page numbers to get more products,More products should be displayed based on selected page number,More products are showing on diff pages,Passed,High,Work as expected
