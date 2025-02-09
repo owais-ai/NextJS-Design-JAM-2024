@@ -6,6 +6,7 @@ import Image from "next/image";
 import { sanityClient } from "@/lib/sanityClient";
 import LoadingSpinner from "../components/LoadingSpinner";
 
+
 interface CartItem {
   id: string;
   quantity: number;
