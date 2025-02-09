@@ -234,23 +234,22 @@ export default function Header() {
                           <div className="text-xl w-full text-center">
                             <div>
                               <button>
-                              <div className="flex flex-col items-center">
-                                <SignedOut>
-                                  <SignInButton>
-                                    <Image
-                                      src={"/mdi_account-alert-outline.svg"}
-                                      alt="Account Alert"
-                                      width={30}
-                                      height={25}
-                                    />
-                                    
+                                <div className="flex flex-col items-center">
+                                  <SignedOut>
+                                    <SignInButton>
+                                      <Image
+                                        src={"/mdi_account-alert-outline.svg"}
+                                        alt="Account Alert"
+                                        width={30}
+                                        height={25}
+                                      />
 
-                                  </SignInButton>
-                                </SignedOut>
-                                <SignedIn>
-                                  <UserButton />
-                                </SignedIn>
-                                <span>Account</span>
+                                    </SignInButton>
+                                  </SignedOut>
+                                  <SignedIn>
+                                    <UserButton />
+                                  </SignedIn>
+                                  <span>Account</span>
                                 </div>
                               </button>
 

@@ -55,9 +55,9 @@ export default function Home() {
           <p className="text-gray-600 mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
           </p>
-          <button className="bg-[#B88E2F] text-white py-2 px-8 rounded hover:bg-[#9a7729] transition">
+          <Link href={"/shop"}><button className="bg-[#B88E2F] text-white py-2 px-8 rounded hover:bg-[#9a7729] transition">
             Buy Now
-          </button>
+          </button></Link>
         </div>
       </div>
 
@@ -128,9 +128,11 @@ export default function Home() {
           <p className="text-[#616161] mt-4">
             Our designer already made a lot of beautiful prototypes of rooms to inspire you.
           </p>
+          <Link href={"/shop"}>
           <button className="bg-[#B88E2F] text-white py-2 px-8 rounded mt-4 hover:bg-[#9a7729] transition">
             Explore More
           </button>
+          </Link>
         </div>
         <div className="relative w-full max-w-[380px] h-[380px] lg:w-1/3">
           <Image src="/Image.svg" alt="Room Inspiration" layout="fill" className="rounded-md" />
