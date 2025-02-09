@@ -79,13 +79,13 @@ export default function Shop() {
       <div className="h-52 relative">
         <Image src="/cover.jpeg" alt="Cover" layout="fill" className="object-cover opacity-40" />
       </div>
-      <div className="h-20 relative">
+      {/* <div className="h-20 relative">
         <Image src="/Group 63.svg" alt="Group" layout="fill" className="object-contain md:object-cover object-center" />
-      </div>
+      </div> */}
 
       {/* Search & Sorting Section */}
-      <div className="flex flex-wrap justify-between items-center px-4 md:px-12 mt-6 mb-6">
-        <h2 className="text-lg sm:text-2xl font-bold text-[#3A3A3A]">Our Products</h2>
+      <div className="flex flex-wrap justify-center md:justify-between items-center px-4 md:px-12 mt-6 mb-6">
+        <h2 className="text-xl sm:text-3xl  my-4 font-bold text-[#3A3A3A]">Our Products</h2>
 
         <div className="flex gap-3 items-center">
           {/* Search Bar (Title Only) */}
