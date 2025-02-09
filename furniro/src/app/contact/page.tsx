@@ -48,7 +48,7 @@ export default function Contact() {
                 </div>
 
                 {/* Contact Form */}
-                <div className="lg:w-1/2 w-full flex flex-col gap-6">
+                <form className="lg:w-1/2 w-full flex flex-col gap-6">
                     
                     {/* Name Input */}
                     <div>
@@ -57,6 +57,7 @@ export default function Contact() {
                             id="name"
                             type="text"
                             placeholder="Name"
+                            required
                             className="w-full py-2 px-4 border-2 rounded-md outline-none border-slate-300 focus:border-[#B88E2F]"
                         />
                     </div>
@@ -68,6 +69,7 @@ export default function Contact() {
                             id="email"
                             type="email"
                             placeholder="Email"
+                            required
                             className="w-full py-2 px-4 border-2 rounded-md outline-none border-slate-300 focus:border-[#B88E2F]"
                         />
                     </div>
@@ -79,6 +81,7 @@ export default function Contact() {
                             id="subject"
                             type="text"
                             placeholder="Subject"
+                            required
                             className="w-full py-2 px-4 border-2 rounded-md outline-none border-slate-300 focus:border-[#B88E2F]"
                         />
                     </div>
@@ -89,16 +92,17 @@ export default function Contact() {
                         <textarea
                             id="message"
                             placeholder="Write your message here..."
+                            required
                             className="w-full py-4 px-4 border-2 rounded-md outline-none border-slate-300 focus:border-[#B88E2F]"
                             rows = {4}
                         />
                     </div>
 
                     {/* Submit Button */}
-                    <button className="bg-[#B88E2F] text-white font-bold py-3 w-52 rounded-md mt-4 hover:bg-[#a4781e] transition">
+                    <button type="submit" className="bg-[#B88E2F] text-white font-bold py-3 w-52 rounded-md mt-4 hover:bg-[#a4781e] transition">
                         Submit
                     </button>
-                </div>
+                </form>
 
             </div>
 

@@ -72,7 +72,7 @@ export default function Wishlist() {
   };
 
   return (
-    <div className="px-4 md:px-12 mt-10">
+    <div className="px-4 md:px-12 my-10">
       <h2 className="text-center text-2xl md:text-3xl font-bold text-[#3A3A3A] mb-8">
         Your Wishlist
       </h2>
