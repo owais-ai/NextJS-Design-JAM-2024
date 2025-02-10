@@ -46,8 +46,15 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <div className="hero bg-[url('/background-hero.jpeg')] w-full bg-cover bg-center h-[500px] md:h-[600px] flex items-center">
-        <div className="w-full max-w-[600px] p-6 bg-[#FFF3E3] rounded-md mx-auto text-center lg:text-left lg:ml-[650px]">
+      <div className="hero w-full bg-cover bg-center h-[500px] md:h-[600px] flex items-center relative">
+      <Image
+        src="/background-hero.jpeg"
+        alt="Hero Background"
+        layout="fill" // makes the image fill the container
+        objectFit="cover" // makes sure it covers the area
+        priority // loads it with higher priority
+      />
+        <div className="w-full max-w-[600px] p-6 bg-[#FFF3E3] rounded-md mx-auto text-center lg:text-left lg:ml-[650px] z-10">
           <p className="text-sm text-gray-700">New Arrival</p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#B88E2F] font-bold my-2">
             Discover Our <br /> New Collection
@@ -69,8 +76,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {[
             { src: "/Mask Group.svg", title: "Dining" },
-            { src: "/Image-living room.svg", title: "Living" },
-            { src: "/Mask Group2.svg", title: "Bedroom" },
+            { src: "/Image-living room.png", title: "Living" },
+            { src: "/Mask Group2.png", title: "Bedroom" },
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center">
               <div className="relative w-full max-w-[300px] h-[300px]">
@@ -154,7 +161,7 @@ export default function Home() {
           <h1 className="text-3xl text-[#3A3A3A] font-bold">#FuniroFurniture</h1>
         </div>
         <div className="w-full">
-          <Image src={"/Images.svg"} alt="Cover pic" width={100} height={30} className="w-full -mt-8 mb-4 object-cover object-center rounded-md" />
+          <Image src={"/Images-1.png"} alt="Cover pic" width={600} height={600} className="w-full md:-mt-8 mb-4 object-cover object-center rounded-md" />
         </div>
       </div>
     </div>
