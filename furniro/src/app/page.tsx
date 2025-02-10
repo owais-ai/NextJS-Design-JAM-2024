@@ -161,7 +161,7 @@ export default function Home() {
           <h1 className="text-3xl text-[#3A3A3A] font-bold">#FuniroFurniture</h1>
         </div>
         <div className="w-full">
-          <Image src={"/Images-1.png"} alt="Cover pic" width={600} height={600} className="w-full md:-mt-8 mb-4 object-cover object-center rounded-md" />
+          <Image src={"/Images.png"} alt="Cover pic" width={600} height={600} className="w-full md:-mt-8 mb-4 object-cover object-center rounded-md" />
         </div>
       </div>
     </div>
